@@ -1,0 +1,13 @@
+# Ignorar todo fuera del repo
+/*
+
+# Incluir solo tus carpetas de la materia
+!/01 Introduccion_a_Java/
+!/02 Introduccion_POO/
+!/03 POO/
+!/04 Programacion_Estructurada/
+!/05 UML_Basico/
+!/06 Colecciones/
+!/07 Herencia y Polimorfismo/
+!/09 Genericos/
+!/10 Acceso a Base De Datos/
