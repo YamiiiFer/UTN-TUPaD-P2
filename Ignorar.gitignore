@@ -1,7 +1,7 @@
-# Ignorar todo fuera del repo
+# Ignorar todo por defecto
 /*
 
-# Incluir solo tus carpetas de la materia
+# Exceptuar las carpetas de tu materia
 !/01 Introduccion_a_Java/
 !/02 Introduccion_POO/
 !/03 POO/
@@ -11,3 +11,22 @@
 !/07 Herencia y Polimorfismo/
 !/09 Genericos/
 !/10 Acceso a Base De Datos/
+
+# Ignorar el subrepo UML_Basico
+05 UML_Basico/
+
+# Archivos de sistema de Windows
+Thumbs.db
+Desktop.ini
+*.lnk
+*.iso
+
+# Archivos temporales de VS Code
+.vscode/
+
+# Archivos de sistema y caché
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
