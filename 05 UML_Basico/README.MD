@@ -1,95 +1,47 @@
-PROGRAMACIÓN II  
+🧩 Trabajo Práctico 5 – Relaciones UML 1 a 1
 
-Trabajo Práctico 5: Relaciones UML 1 a 1 
+Tecnicatura Universitaria en Programación – UTN
+Materia: Programación II
+Tema: Relaciones UML 1 a 1
 
-Este repositorio contiene dos ejercicios prácticos en Java que ilustran diferentes tipos de relaciones entre clases: **asociación unidireccional** y **asociación bidireccional**.  
-Los diagramas UML fueron diseñados previamente en **UMLetino** como parte del diseño orientado a objetos.
+🎯 Objetivo General
 
----
+Modelar clases con relaciones 1 a 1 utilizando diagramas UML e implementar las relaciones en Java, identificando correctamente el tipo (asociación, agregación, composición, dependencia de uso y dependencia de creación) y su dirección.
 
-## 🧩 Ejercicio 1: Asociación Unidireccional
-
-### 📘 Descripción
-En este ejercicio se implementa una relación **unidireccional** entre las clases `Pasaporte` y `Foto`.  
-Un pasaporte **posee una foto**, pero la foto **no conoce al pasaporte**.
-
-### 💡 Clases principales
-- **Foto**: representa una imagen asociada al pasaporte (nombre y formato).
-- **Pasaporte**: contiene número, fecha de emisión y una foto.
-- **Principal**: clase con el método `main` para probar el funcionamiento.
-
-### 🧠 Conceptos aplicados
-- Asociación unidireccional.
-- Composición (la foto pertenece al pasaporte).
-- Encapsulamiento y constructores.
-- Método `mostrarInfo()` para mostrar los datos en consola.
-
-### 📋 Ejemplo de salida
-Pasaporte N° A1234567
-Fecha de emisión: 2025-10-19
-Foto: osito.jpg
+| Tipo de relación            | Descripción breve                                                       |
+| --------------------------- | ----------------------------------------------------------------------- |
+| **Asociación**              | Una clase conoce a otra mediante una referencia (uni o bidireccional).  |
+| **Agregación**              | Relación “tiene un”, pero los objetos pueden existir por separado.      |
+| **Composición**             | Relación fuerte: el ciclo de vida del objeto depende del contenedor.    |
+| **Dependencia de uso**      | Una clase usa otra como parámetro en un método, sin guardarla.          |
+| **Dependencia de creación** | Una clase crea otra dentro de un método, sin conservarla como atributo. |
 
 
----
+Se desarrollaron 14 ejercicios en Java, cada uno con:
 
-## 🔁 Ejercicio 2: Asociación Bidireccional
+Diagrama UML
 
-### 📘 Descripción
-En este segundo ejercicio se implementa una relación **bidireccional** entre `Pasaporte` y `Titular`.  
-El pasaporte **conoce a su titular**, y el titular **también conoce a su pasaporte**.  
-Además, se mantiene la asociación con la clase `Foto` como en el ejercicio anterior.
+Identificación del tipo y dirección de la relación
 
-### 💡 Clases principales
-- **Titular**: representa la persona que posee el pasaporte (nombre y DNI).
-- **Pasaporte**: contiene número, fecha de emisión, una foto y una referencia al titular.
-- **Foto**: se reutiliza del ejercicio anterior.
-- **Principal**: instancia los objetos y asocia ambos extremos de la relación.
+Implementación de las clases con sus atributos y relaciones
 
-### 🔗 Diagrama UML (resumen)
-Titular ↔ Pasaporte → Foto
+Incluye ejemplos de:
 
+Asociación simple y bidireccional
 
-### 🧠 Conceptos aplicados
-- Asociación bidireccional (uso de referencias cruzadas).
-- Encapsulamiento y métodos `setTitular()` y `setPasaporte()`.
-- Constructores y método `mostrarInfo()` en cada clase.
-- Relaciones 1..1 explícitas en el diseño UML.
+Agregación y composición
 
-### 📋 Ejemplo de salida
-Pasaporte N° A1234567
-Fecha de emisión: 2025-10-19
-Foto: osito.jpg
-Titular: Juan Pérez
+Dependencias de uso y creación
 
-Titular: Juan Pérez
-DNI: 12345678
-Pasaporte asociado: A1234567
+✅ Conclusiones
 
+Se comprendieron las diferencias entre los tipos de relaciones UML.
 
----
+Se aplicaron correctamente las direcciones y dependencias.
 
-## ⚙️ Requisitos
-- Java 8 o superior.
-- Editor o IDE (NetBeans, IntelliJ IDEA, Eclipse o VSCode).
-- UMLetino (para abrir los diagramas UML del proyecto).
+Se fortaleció la comprensión del modelado orientado a objetos y su traducción a código Java.
 
----
+✍️ Autor
 
-## 📂 Estructura del proyecto
-Ejercicio1/
-├── Foto.java
-├── Pasaporte.java
-├── Principal.java
-Ejercicio2/
-├── Foto.java
-├── Titular.java
-├── Pasaporte.java
-├── Principal.java
-
-
----
-
-## ✨ Autor
-**Yamila Fernández**  
-Tecnicatura Universitaria en Programación - UTN  
-Trabajo Práctico 5: Relaciones UML 1 a 1
+Yamila Fernández
+Tecnicatura Universitaria en Programación – UTN

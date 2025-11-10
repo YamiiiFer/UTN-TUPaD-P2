@@ -3,67 +3,54 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Ejercicio2;
-
-public class Celular {
-    // Atributos
-    private String imei;
+public class Celular{
+    //atributos
     private String marca;
     private String modelo;
-    private Bateria bateria; // agregación
-    private Usuario usuario; // asociación bidireccional
-
-    // Constructor
-    public Celular(String imei, String marca, String modelo, Bateria bateria) {
-        this.imei = imei;
+    private String imei;
+    private Bateria bateria;
+    private Usuario usuario;
+    //constructor
+    public Celular(String marca, String modelo, String imei, Bateria bateria) {
         this.marca = marca;
         this.modelo = modelo;
+        this.imei = imei;
         this.bateria = bateria;
     }
-
-    // Getters y Setters
-    public String getImei() {
-        return imei;
-    }
-
+    //Getters y Setters
     public String getMarca() {
         return marca;
     }
-
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
     public String getModelo() {
         return modelo;
     }
-
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    public String getImei() {
+        return imei;
+    }
+    public void setImei(String imei) {
+        this.imei = imei;
+    }
     public Bateria getBateria() {
         return bateria;
     }
-
     public void setBateria(Bateria bateria) {
         this.bateria = bateria;
     }
-
     public Usuario getUsuario() {
         return usuario;
     }
-
+    //Asociación bidireccional con Usuario
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-        if (usuario.getCelular() != this) { // mantiene bidireccionalidad
+        if (usuario != null && usuario.getCelular() != this) {
             usuario.setCelular(this);
         }
     }
 
-    // Método para mostrar información
-    public void mostrarInfo() {
-        System.out.println("IMEI: " + imei);
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-        if (bateria != null) {
-            System.out.println("--- Información de la batería ---");
-            bateria.mostrarInfo();
-        }
-        if (usuario != null) {
-            System.out.println("--- Información del usuario ---");
-            usuario.mostrarInfo();
-        }
-    }
 }

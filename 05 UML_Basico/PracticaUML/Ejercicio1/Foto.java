@@ -5,32 +5,30 @@
 package Ejercicio1;
 
 public class Foto {
-    private String nombre;
+    //atributos
+    private String imagen;
     private String formato;
     
     //Constructor
-
-    public Foto(String nombre, String formato) {
-        this.nombre = nombre;
+    public Foto(String imagen, String formato) {
+        this.imagen = imagen;
         this.formato = formato;
     }
-    // Getters y setters
-
-    public String getNombre() {
-        return nombre;
+    //Getters y Setters
+    public String getImagen() {
+        return imagen;
     }
-    public void setImagen(String nombre) {
-        this.nombre = nombre;
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     public String getFormato() {
         return formato;
     }
+
     public void setFormato(String formato) {
         this.formato = formato;
     }
-    public void mostrarInfo(){
-        System.out.println("Nombre de la imagen: " + nombre + ", Formato: " + formato);
-    }
-    
+
 }

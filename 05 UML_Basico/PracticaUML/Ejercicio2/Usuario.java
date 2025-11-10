@@ -3,45 +3,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Ejercicio2;
+public class Usuario{
 
-public class Usuario {
-    // Atributos
     private String nombre;
     private String dni;
     private Celular celular;
 
-    // Constructor
     public Usuario(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
     }
-
-    // Getters y Setters
+    //Getters y Setters
     public String getNombre() {
         return nombre;
     }
-
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
     public String getDni() {
         return dni;
     }
-
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
     public Celular getCelular() {
         return celular;
     }
-
+    // Asociación bidireccional con Celular
     public void setCelular(Celular celular) {
         this.celular = celular;
-        if (celular.getUsuario() != this) { // mantiene bidireccionalidad
+        if (celular != null && celular.getUsuario() != this) {
             celular.setUsuario(this);
         }
     }
 
-    // Método para mostrar información
-    public void mostrarInfo() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("DNI: " + dni);
-        if (celular != null) {
-            System.out.println("Celular asociado: " + celular.getModelo());
-        }
-    }
 }
